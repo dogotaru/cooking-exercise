@@ -1,0 +1,31 @@
+html, body, #react-document-container, #react-uapp-container,
+#microfrontend-wrapper {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.rs-container {
+  display: flex;
+  //flex-direction: column;
+  height: 100%;
+}
+
+.rs-header {
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.rs-footer {
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.rs-content {
+  padding: 10px;
+  flex: 1 0 auto;
+  overflow-y: auto;
+}

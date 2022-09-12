@@ -1,0 +1,17 @@
+.container {
+  padding: 30px;
+
+  .ingredientsToggle {
+    width: 100% !important;
+
+    .rs-picker-toggle {
+      border: none !important;
+    }
+  }
+  .measuresToggle {
+    width: 200px;
+    .rs-picker-toggle {
+      border: none !important;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+FROM node:12
+
+ARG CHOSE_PROXY
+
+USER root
+
+# installing stuff
+# inotify-tools - for react hot loading, Linux Filesystem Events
+RUN \
+    apt-get update && apt-get install -y \
+        nano vim inotify-tools git
+
+USER node
+
+ENV PATH=${PATH}:/home/node/.npm-global/bin:/home/node/app/node_modules/.bin/

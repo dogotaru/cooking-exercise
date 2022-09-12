@@ -1,0 +1,19 @@
+version: '3'
+services:
+    nodejs:
+        container_name: kitchen
+        image: node:12
+        user: node
+        build:
+            context: .
+            dockerfile: docker/dockerfile
+        tty: true
+        working_dir: /home/node/app
+        ports:
+            - 8080:8080
+            - 3000:3000
+        volumes:
+            - .:/home/node/app
+        environment:
+            - NPM_CONFIG_PREFIX=/home/node/.npm-global
+            - NPM_CONFIG_LOGLEVEL=info
